@@ -11,7 +11,7 @@ Contributions -
 Kamil wrote is fibonnaci detection program. 
 Husnain reviewed and tested is fibonnaci in the MIPS program.
 Anthony wrote the is odd detection program.
-Alexis reviewd and tested is odd in the MIPS program. 
+Alexis reviewWd and tested is odd in the MIPS program. 
 
 How to test:
 1. Launch the MARS simulator and open is_odd.asm or fibonnaci.asm.
