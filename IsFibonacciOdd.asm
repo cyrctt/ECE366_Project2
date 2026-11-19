@@ -6,7 +6,7 @@ result: .word 0
 .globl main
 
 main:
-    # load n and IsFibonacciOdd(n) - this function is missing as of now
+    # load n and IsFibonacciOdd(n)
     lw $a0, n
     jal IsFibonacciOdd
 
@@ -60,3 +60,44 @@ fib_base:
     # return n when n is 0 or 1
     move $v0, $a0
     jr $ra
+
+IsOdd:
+    # save return address
+    addi $sp, $sp, -4
+    sw $ra, 0($sp)
+    # set y= 2 and call divison(m, 2)
+    li $al, 2
+    jal division
+    # if remainder == 0, return False
+    beq $v0, $zero, return_false
+    # otherwise, return True
+    li $v0, 1
+    j isodd_end
+return_false:
+    li $v0, 0
+
+isodd_end:
+    lw $ra, 0($sp)
+    addi $sp, $sp, 4
+    jr $ra
+
+division:
+    # quotient = 0
+    li $t0, 0
+
+div_loop:
+    # while x >= y, keep subtracting
+    blt $a0, $a1, div_end
+    # x= x-y, quotient= quotient+1
+    sub $a0, $a0, $a1
+    addi $t0, $t0, 1
+    j div_loop
+
+div_end:
+    # return remainder x
+    move $v0, $a0
+    jr $ra
+
+
+
+    
