@@ -66,7 +66,7 @@ IsOdd:
     addi $sp, $sp, -4
     sw $ra, 0($sp)
     # set y= 2 and call divison(m, 2)
-    li $al, 2
+    li $a1, 2
     jal division
     # if remainder == 0, return False
     beq $v0, $zero, return_false
