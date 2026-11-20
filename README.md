@@ -3,9 +3,13 @@ A MIPS assembly program using the MARS simulator to compute Fibonacci numbers, d
 
 # Group members
 Alexis M. [67428514] - amedin72
+
 Anthony G. [657434216] - agudin2
+
 Husnain H. [668388416] - hharo
+
 Kamil B. [659338143] - bank3
+
 
 Contributions -
 Kamil wrote is fibonnaci detection program. 
@@ -21,3 +25,5 @@ How to test:
 4. Click Run > Go to run the program to completion.
 5. - Look at the data segment window at the bottom of the Execute tab.
    - Check that the result makes sense in the appropriate memory register.
+
+Github link: https://github.com/cyrctt/ECE366_Project2
